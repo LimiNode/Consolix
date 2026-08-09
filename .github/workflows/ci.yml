@@ -89,3 +89,33 @@ jobs:
 
       - name: Test
         run: ctest --test-dir build --output-on-failure
+
+  build-with-parent-event-hub:
+    name: build-with-parent-event-hub-${{ matrix.platform }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux
+            os: ubuntu-22.04
+          - platform: windows
+            os: windows-latest
+          - platform: macos
+            os: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Configure parent-provided event hub fixture
+        run: >
+          cmake -S tests/cmake/parent_event_hub -B build-parent-event-hub -G Ninja
+
+      - name: Build parent-provided event hub fixture
+        run: cmake --build build-parent-event-hub --parallel
+
+      - name: Test parent-provided event hub fixture
+        run: ctest --test-dir build-parent-event-hub --output-on-failure
