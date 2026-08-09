@@ -66,14 +66,16 @@ if(CONSOLIX_USE_CXXOPTS)
 endif()
 
 if(CONSOLIX_USE_EVENT_HUB)
-    set(EVENT_HUB_CPP_BUILD_EXAMPLES OFF CACHE BOOL "Build event-hub-cpp examples" FORCE)
-    set(EVENT_HUB_CPP_BUILD_TESTS OFF CACHE BOOL "Build event-hub-cpp tests" FORCE)
-    set(EVENT_HUB_CPP_USE_TIME_SHIELD OFF CACHE BOOL "Enable optional time-shield-cpp integration" FORCE)
+    if(NOT TARGET event_hub::event_hub)
+        set(EVENT_HUB_CPP_BUILD_EXAMPLES OFF CACHE BOOL "Build event-hub-cpp examples" FORCE)
+        set(EVENT_HUB_CPP_BUILD_TESTS OFF CACHE BOOL "Build event-hub-cpp tests" FORCE)
+        set(EVENT_HUB_CPP_USE_TIME_SHIELD OFF CACHE BOOL "Enable optional time-shield-cpp integration" FORCE)
 
-    add_subdirectory(
-        ${CMAKE_CURRENT_SOURCE_DIR}/external/event-hub-cpp
-        ${CMAKE_CURRENT_BINARY_DIR}/external/event-hub-cpp
-    )
+        add_subdirectory(
+            ${CMAKE_CURRENT_SOURCE_DIR}/external/event-hub-cpp
+            ${CMAKE_CURRENT_BINARY_DIR}/external/event-hub-cpp
+        )
+    endif()
     target_link_libraries(Consolix INTERFACE event_hub::event_hub)
 endif()
 
