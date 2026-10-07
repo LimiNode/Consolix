@@ -115,7 +115,7 @@ namespace consolix {
         /// \throws std::runtime_error If one or more components fail during shutdown.
         void shutdown(int signal) {
 #           if CONSOLIX_USE_LOGIT == 1
-            LOGIT_PRINT_INFO("Starting shutdown with signal: ", signal);
+            LOGIT_PRINT_DEBUG("Starting shutdown with signal: ", signal);
 #           endif
             std::vector<std::string> errors; // Собираем ошибки
             for (size_t remaining = m_components.size(); remaining > 0; --remaining) {
