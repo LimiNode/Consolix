@@ -294,7 +294,7 @@ namespace consolix {
 #           endif
 
 #           if CONSOLIX_USE_LOGIT == 1
-            LOGIT_PRINT_INFO("Cleaning up application for exit code: ", exit_code);
+            LOGIT_PRINT_DEBUG("Cleaning up application for exit code: ", exit_code);
 #           endif
 
             try {
