@@ -89,8 +89,8 @@ Enable only the features you need before including Consolix headers.
 
 The repository vendors several external libraries as submodules under `external/`.
 
-- [LogIt](https://github.com/NewYaroslav/log-it-cpp) powers `LoggerComponent` and the LogIt-backed logging path when `CONSOLIX_USE_LOGIT=1`
-- [time-shield-cpp](https://github.com/NewYaroslav/time-shield-cpp) is a vendored dependency used by the LogIt integration; most Consolix users do not interact with it directly through the Consolix API
+- [LogIt](https://github.com/LimiNode/log-it-cpp) powers `LoggerComponent` and the LogIt-backed logging path when `CONSOLIX_USE_LOGIT=1`
+- [time-shield-cpp](https://github.com/LimiNode/time-shield-cpp) is a vendored dependency used by the LogIt integration; most Consolix users do not interact with it directly through the Consolix API
 - [cxxopts](https://github.com/jarro2783/cxxopts) enables `CliComponent` and related CLI aliases when `CONSOLIX_USE_CXXOPTS=1`
 - [nlohmann/json](https://github.com/nlohmann/json) enables `ConfigComponent` and JSON-backed configuration loading when `CONSOLIX_USE_JSON=1`
 
