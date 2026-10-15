@@ -89,8 +89,8 @@ Consolix спроектирован в aggregate-first стиле.
 
 Репозиторий хранит несколько внешних библиотек как submodules в `external/`.
 
-- [LogIt](https://github.com/NewYaroslav/log-it-cpp) используется для `LoggerComponent` и LogIt-based пути логирования при `CONSOLIX_USE_LOGIT=1`
-- [time-shield-cpp](https://github.com/NewYaroslav/time-shield-cpp) — vendored dependency, которая используется вместе с интеграцией `LogIt`; обычно пользователь Consolix напрямую с ней не работает
+- [LogIt](https://github.com/LimiNode/log-it-cpp) используется для `LoggerComponent` и LogIt-based пути логирования при `CONSOLIX_USE_LOGIT=1`
+- [time-shield-cpp](https://github.com/LimiNode/time-shield-cpp) — vendored dependency, которая используется вместе с интеграцией `LogIt`; обычно пользователь Consolix напрямую с ней не работает
 - [cxxopts](https://github.com/jarro2783/cxxopts) включает `CliComponent` и связанные CLI aliases при `CONSOLIX_USE_CXXOPTS=1`
 - [nlohmann/json](https://github.com/nlohmann/json) включает `ConfigComponent` и JSON-based загрузку конфигурации при `CONSOLIX_USE_JSON=1`
 
