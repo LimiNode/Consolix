@@ -1,10 +1,10 @@
 [submodule "external/log-it-cpp"]
 	path = external/log-it-cpp
-	url = https://github.com/NewYaroslav/log-it-cpp.git
+	url = https://github.com/LimiNode/log-it-cpp.git
 	branch = main
 [submodule "external/time-shield-cpp"]
 	path = external/time-shield-cpp
-	url = https://github.com/NewYaroslav/time-shield-cpp.git
+	url = https://github.com/LimiNode/time-shield-cpp.git
 	branch = main
 [submodule "external/cxxopts"]
 	path = external/cxxopts
@@ -14,7 +14,7 @@
 	url = https://github.com/nlohmann/json.git
 [submodule "external/event-hub-cpp"]
 	path = external/event-hub-cpp
-	url = https://github.com/NewYaroslav/event-hub-cpp.git
+	url = https://github.com/LimiNode/event-hub-cpp.git
 	branch = main
 [submodule ".github/doxygen-awesome-css"]
 	path = .github/doxygen-awesome-css
